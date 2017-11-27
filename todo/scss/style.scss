@@ -1,0 +1,45 @@
+/* The version of Bourbon used in this Pen was 4.* */
+@import "bourbon";
+
+$white: #f6f7f7;
+$grey: #dcdfe0;
+$black: #20242c;
+$blue: #1e8cd4;
+$size: 32px;
+
+body {
+  font-family: sans-serif;
+  background-color: $white;
+  color: $black;
+}
+
+.list {
+  background-color: $grey;
+  margin: 0 auto;
+  
+  button {
+    @include button(simple, $blue);
+  }
+  
+  .item {
+    overflow: hidden;
+  }
+  
+  .example-enter {
+    max-height: 0;
+    transition: max-height 0.5s ease-in;
+  }
+
+  .example-enter.example-enter-active {
+    max-height: $size;
+  }
+  
+  .example-leave {
+    max-height: $size;
+    transition: max-height .5s ease-in;
+  }
+
+  .example-leave.example-leave-active {
+    max-height: 0;
+  }
+}

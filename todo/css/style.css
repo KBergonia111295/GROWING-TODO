@@ -1,0 +1,58 @@
+body {
+  font-family: sans-serif;
+  background-color: #f6f7f7;
+  color: #20242c;
+}
+
+.list {
+  background-color: #dcdfe0;
+  margin: 0 auto;
+}
+.list button {
+  border: 1px solid #0d649d;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 0 0 #5fade0;
+  color: white;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: bold;
+  background-color: #1e8cd4;
+  background-image: -webkit-linear-gradient(#1e8cd4, #0f6dab);
+  background-image: linear-gradient(#1e8cd4, #0f6dab);
+  padding: 7px 18px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #07598f;
+  background-clip: padding-box;
+}
+.list button:hover:not(:disabled) {
+  background-color: #1f7cb9;
+  background-image: -webkit-linear-gradient(#1f7cb9, #0e649c);
+  background-image: linear-gradient(#1f7cb9, #0e649c);
+  box-shadow: inset 0 1px 0 0 #3397d8;
+  cursor: pointer;
+}
+.list button:active:not(:disabled), .list button:focus:not(:disabled) {
+  border: 1px solid #0d649d;
+  box-shadow: inset 0 0 8px 4px #0e5b8d, inset 0 0 8px 4px #0e5b8d;
+}
+.list button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.list .item {
+  overflow: hidden;
+}
+.list .example-enter {
+  max-height: 0;
+  transition: max-height 0.5s ease-in;
+}
+.list .example-enter.example-enter-active {
+  max-height: 32px;
+}
+.list .example-leave {
+  max-height: 32px;
+  transition: max-height .5s ease-in;
+}
+.list .example-leave.example-leave-active {
+  max-height: 0;
+}
